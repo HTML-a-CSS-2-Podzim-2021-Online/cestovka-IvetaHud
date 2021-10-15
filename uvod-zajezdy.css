@@ -1,0 +1,95 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; } 
+
+.zajezdy{
+    display: flex;
+    justify-content: space-between;
+    color:white;
+
+}
+
+.zajezdy__zajezd1 {
+    background-image: url(podklady/palmy.jpg);
+}
+
+.zajezdy__zajezd2 {
+    background-image: url(podklady/jezero.jpg);
+}
+
+.zajezdy__zajezd3 {
+    background-image: url(podklady/nakole.jpg);
+}
+
+.zajezdy__zajezd1,
+.zajezdy__zajezd2,
+.zajezdy__zajezd3 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.zajezdy__zajezd1--cena,
+.zajezdy__zajezd2--cena,
+.zajezdy__zajezd3--cena {
+    font-size: 1rem;
+    color: white;
+    background-color: var(--hlavni-barva);
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    padding: 6px;
+
+}
+
+
+
+
+
+
+/* Mobil */
+@media screen and (max-width: 420px){
+    .zajezdy {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .zajezdy__zajezd1 {
+        height: 240px;
+        width: auto;
+        margin: 10px 0;
+
+    }
+
+    .zajezdy__zajezd2,
+    .zajezdy__zajezd3 {
+        height: 160px;
+        width: auto;
+        margin: 10px 0;
+    }
+
+    .zajezdy__zajezd1--text {
+        position: absolute;
+        left: 20px;
+        bottom: 10px;
+    }
+
+    .zajezdy__zajezd2--text,
+    .zajezdy__zajezd3--text {
+        position: absolute;
+        left: 20px;
+        bottom: 10px;
+        font-size: 0.8rem;;
+    }
+
+    .zajezdy__zajezd1--text p {
+        font-size: 0.7rem;
+    }
+
+}
+
+/* Tablet */
+@media screen and (max-width: 640px){
+
+
+}

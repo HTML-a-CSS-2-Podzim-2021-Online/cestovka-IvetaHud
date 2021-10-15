@@ -1,0 +1,71 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; } 
+
+.hlavicka {
+    display: flex;
+    color: var(--hlavni-barva);
+    justify-content: space-between;
+    text-align: center;
+}
+
+.hlavicka-menu {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.hlavicka-menu__polozka {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--hlavni-barva);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+a:hover,
+a:focus {
+    color: white;
+    background-color: var(--hlavni-barva);
+}
+
+
+/* Mobil */
+@media screen and (max-width: 420px){
+
+    .hlavicka {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hlavicka-logo {
+        justify-content: space-around;
+        width: 60%;
+        height: auto;
+        margin: 5% 25% 10% 25%;
+    }
+
+    .hlavicka-menu {
+        flex-grow: 1;
+    }
+
+    
+}
+
+
+/* Tablet */
+@media screen and (max-width: 640px) {
+
+    .polozka {
+        width: calc(100%/3);
+    }
+
+    a {
+        font-size: 1rem;
+    }
+}
+
+
+
