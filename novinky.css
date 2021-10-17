@@ -1,2 +1,26 @@
 html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
+
+.novinky {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+
+}
+
+.novinky__novinka {
+    background-color: rgb(226, 225, 225);
+    margin: 10px 0;
+    padding: 20px 10px;
+}
+
+.novinky__novinka--datum {
+    color: grey;
+    padding-bottom: 5px;
+}
+
+.novinky__novinka--nadpis {
+    color: var(--hlavni-barva);
+    padding-bottom: 5px;
+}
+

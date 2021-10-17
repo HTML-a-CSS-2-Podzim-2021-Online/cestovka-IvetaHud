@@ -1,23 +1,27 @@
 html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; } 
 
+.nadpis-sekce {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
 .lastminute{
     display: flex;
     justify-content: space-between;
     color:white;
-
 }
 
 .lastminute__zajezd1 {
-    background-image: url(podklady/palmy.jpg);
+    background-image: url(podklady/lodicka.jpg);
 }
 
 .lastminute__zajezd2 {
-    background-image: url(podklady/jezero.jpg);
+    background-image: url(podklady/podkova.jpg);
 }
 
 .lastminute__zajezd3 {
-    background-image: url(podklady/nakole.jpg);
+    background-image: url(podklady/zatoka.jpg);
 }
 
 .lastminute__zajezd1,
