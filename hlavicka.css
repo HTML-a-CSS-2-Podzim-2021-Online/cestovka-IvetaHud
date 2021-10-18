@@ -65,6 +65,10 @@ a:focus {
     a {
         font-size: 1rem;
     }
+
+    .hlavicka {
+        margin-bottom: 30px;
+    }
 }
 
 
