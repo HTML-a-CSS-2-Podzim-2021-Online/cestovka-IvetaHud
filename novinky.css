@@ -2,21 +2,21 @@ html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
 
 .novinky {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
     font-size: 12px;
-    width: auto;
+    gap: 10px;
+    margin-top: 30px;
 }
 
-.novinky__novinka,
-.novinky__novinka2 {
-    background-color: rgb(226, 225, 225);
-    margin: 10px 0;
+.novinky__novinka {
+    background-color: var(--barva_novinky_pozadi);
     padding: 20px 10px;
 }
 
 .novinky__novinka--datum {
-    color: grey;
+    color: var(--barva_novinky_datum);
     padding-bottom: 5px;
 }
 
@@ -25,20 +25,9 @@ html { box-sizing: border-box; }
     padding-bottom: 5px;
 }
 
-
 @media screen and (min-width: 640px) {
     .novinky {
-        flex-direction: row;
-        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
     }
-    
-    .novinky__novinka,
-    .novinky__novinka2 {
-        padding: 10px;
-    }
-
-    .novinky__novinka2 {
-        margin: 10px;
-    }
-
 }
