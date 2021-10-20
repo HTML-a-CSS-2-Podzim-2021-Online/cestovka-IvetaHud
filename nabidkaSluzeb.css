@@ -2,8 +2,10 @@ html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; } 
 
 .nabidka-sluzeb {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 150px);
+    gap: 10px;
 }
 
 .nabidka-sluzeb__obsah {
@@ -32,6 +34,30 @@ html { box-sizing: border-box; }
 
 .nabidka-sluzeb__obsah img {
     padding: 10px;
-    width: 100px;
+    width: 90px;
     height: auto;
+}
+
+
+@media screen and (min-width: 420px) {
+    .nabidka-sluzeb {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        height: auto;
+        margin: 30px 20px 30px 0px;
+    }
+
+
+}
+
+
+@media screen and (min-width: 640px) {
+    .nabidka-sluzeb {
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: 1fr;
+        gap: 10px;
+        height: auto;
+    }
+    
 }

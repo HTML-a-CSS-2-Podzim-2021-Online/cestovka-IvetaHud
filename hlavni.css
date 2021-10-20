@@ -3,13 +3,16 @@ html { box-sizing: border-box; }
 
 :root {
     --hlavni-barva: #F03000;
+    --barva-textu: white;
 }
+
+
 
 body {
-    margin: 1rem 3rem auto;
-    font-family: 'Montserrat', sans-serif;
-}
-
+        margin: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        
+    }
 .paticka {
     color: white;
     background-color: rgb(77, 76, 76);
@@ -19,17 +22,17 @@ body {
 }
 
 /* Mobil */
-@media screen and (max-width: 420px){
-    body {
-        margin: 1rem;
-    }
+@media screen and (min-width: 420px){
+   body {
+        margin: 2rem 1rem auto;
+    }    
 }
 
 
 /* Tablet */
-@media screen and (min-width: 480px) {
-    body {
-        margin: 2rem 1rem auto;
-    }  
+@media screen and (min-width: 640px) {
+   body {
+        margin: 1rem 3rem auto;
+    }
 }
 

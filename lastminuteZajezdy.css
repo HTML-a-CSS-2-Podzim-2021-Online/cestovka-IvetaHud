@@ -7,9 +7,13 @@ html { box-sizing: border-box; }
 }
 
 .lastminute{
-    display: flex;
-    justify-content: space-between;
-    color:white;
+    display: grid;
+    grid-template-columns: 1, auto ;
+    grid-template-rows: 300px 150px 150px;
+    gap: 10px;
+    margin: 30px 10px 30px 0px;
+    color: var(--barva-textu);
+    
 }
 
 .lastminute__zajezd1 {
@@ -37,7 +41,7 @@ html { box-sizing: border-box; }
 .lastminute__zajezd2--cena,
 .lastminute__zajezd3--cena {
     font-size: 1rem;
-    color: white;
+    color: var(--barva-textu);
     background-color: var(--hlavni-barva);
     position: absolute;
     left: 20px;
@@ -45,29 +49,7 @@ html { box-sizing: border-box; }
     padding: 6px;
 }
 
-
-/* Mobil */
-@media screen and (max-width: 420px){
-    .lastminute {
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .lastminute__zajezd1 {
-        height: 240px;
-        width: auto;
-        margin: 10px 0;
-
-    }
-
-    .lastminute__zajezd2,
-    .lastminute__zajezd3 {
-        height: 160px;
-        width: auto;
-        margin: 10px 0;
-    }
-
-    .lastminute__zajezd1--text {
+.lastminute__zajezd1--text {
         position: absolute;
         left: 20px;
         bottom: 10px;
@@ -86,10 +68,62 @@ html { box-sizing: border-box; }
         padding-right: 5px;
     }
 
+
+
+@media screen and (min-width: 420px){
+    .lastminute {
+        grid-template-columns: 50% 50% ;
+        grid-template-rows: 400px 200px;
+    }
+
+    .lastminute__zajezd1 {
+        grid-column-start: span 2;
+    }
+
+    .lastminute__zajezd2 {
+        grid-column: 1/2;
+    }
+
+    .lastminute__zajezd3 {
+        grid-column: 2/2;
+    }
+
+    .lastminute__zajezd1--text {
+        position: absolute;
+        left: 20px;
+        bottom: 10px;
+    }
+    
+    .lastminute__zajezd2--text,
+    .lastminute__zajezd3--text {
+        position: absolute;
+        left: 20px;
+        bottom: 10px;
+        font-size: 0.8rem;;
+    }
+    
 }
 
-/* Tablet */
-@media screen and (max-width: 640px){
+@media screen and (min-width: 640px){
+    .lastminute {
+        grid-template-columns: 33% 67%;
+        grid-template-rows: 200px 200px;
+    }
+
+    .lastminute__zajezd1 {
+        grid-column: 2/span 2;
+        grid-row: 1/span 2
+    }
+
+    .lastminute__zajezd2 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .lastminute__zajezd3 {
+        grid-column: 1;
+        grid-row: 2;
+    }
 
 
 }
